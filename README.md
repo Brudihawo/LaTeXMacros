@@ -94,7 +94,17 @@ editor.write("\\text{\\frac{d}{d" + triggerMatches[1] + "}}")
 ```
 
 #### scriptfig - fig\.(\S+) (\S+) (.+)#(.\*)\.  
-Inserts a figure with width, image name in default path img/image_name, caption (and label if specified).
+Inserts a figure with width, image name and caption (and label if specified).  
+For example: ```fig.somewidth imgname This is a caption.#thisisalabel.``` will be replaced by:
+    
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=somewidth]{imgname}
+      \caption{This is a caption.}
+      \label{img:thisisalabel}
+    \end{figure}
+If the label is omitted (input: ```fig.somewidth imgname This is a caption.#.```), the line containing the label will not be present in the output. Note that the first two parameters are separated by a space. Adding spaces in those parameters can lead to unexpected behaviour.
+
 ```JavaScript
 var str_write;
 if (triggerMatches[4] != "") {

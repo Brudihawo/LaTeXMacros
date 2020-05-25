@@ -133,7 +133,7 @@ triggerMatches[4]);
 
 #### supersub - (.\*)##(.+)##(.\*)
 Inserts a superscript, superscript or ```\mathrm{}``` formatting at the current position. Everything between the "##" and after the first occurance of "\_" or "^" will be formatted as  ```\mathrm{}``` and super-/ or subscripted. No use of "\_" or "^" will just ```\mathrm{}``` the entire thing.  
-For Example: ```##A_sub^super##``` will be replaced by ```A_\mathrm{sub}^\mathrm{super}``` and ```##roman##``` wil be replaced by ```\mathrm{roman}```.
+For Example: ```##A_sub^super##``` will be replaced by ```A_\mathrm{sub}^\mathrm{super}``` and ```##roman##``` wil be replaced by ```\mathrm{roman}```. **The Sequence of ^ and _ will be considered when creating the LaTeX code to insert!** 
 
 ```JavaScript
 editor.write(triggerMatches[1]);

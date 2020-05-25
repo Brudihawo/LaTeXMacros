@@ -74,7 +74,7 @@ Shorthand for the LaTeX variable for textwidth.
 #### Degree Symbol - °
 Inserts degree symbol. For use in math mode.
 
-     ^{\circ}
+    ^{\circ}
 
 
 #### pdf_tex Input - #pdftex
@@ -162,43 +162,43 @@ editor.write(triggerMatches[3]);
 Inserts right facing arrows depending on input. Outputs ```\rightarrow```, ```\Rightarrow```, ```\longrightarrow``` or ```\Longrightarrow``` for inputs of "->", "=>", "-->" and "==>" respectively.
 ```JavaScript
 switch(triggerMatches[1]) {
-	case "-":
-		editor.write("\\rightarrow");
-		break;
-	case "=":
-		editor.write("\\Rightarrow");
-		break;
-	case "--":
-		editor.write("\\longrightarrow");
-		break;
-	case "==":
-		editor.write("\\Longrightarrow");
-		break;
-	default:
-		editor.write(triggerMatches[1] + ">");
-		break;
+  case "-":
+    editor.write("\\rightarrow");
+    break;
+  case "=":
+    editor.write("\\Rightarrow");
+    break;
+  case "--":
+    editor.write("\\longrightarrow");
+    break;
+  case "==":
+    editor.write("\\Longrightarrow");
+    break;
+  default:
+    editor.write(triggerMatches[1] + ">");
+    break;
 }
 ```
 
 #### ArrowsLeft - <([-]{1,2}|[=]{1,2})
 Same as ArrowsRight but arrows facing the other way.
-```
+```JavaScript
 switch(triggerMatches[1]) {
-	case "-":
-		editor.write("\\leftarrow");
-		break;
-	case "=":
-		editor.write("\\Leftarrow");
-		break;
-	case "--":
-		editor.write("\\longleftarrow");
-		break;
-	case "==":
-		editor.write("\\Longleftarrow");
-		break;
-	default:
-		editor.write("<" + triggerMatches[1]);
-		break;
+  case "-":
+    editor.write("\\leftarrow");
+    break;
+  case "=":
+    editor.write("\\Leftarrow");
+    break;
+  case "--":
+    editor.write("\\longleftarrow");
+    break;
+  case "==":
+    editor.write("\\Longleftarrow");
+    break;
+  default:
+    editor.write("<" + triggerMatches[1]);
+    break;
 }
 ```
 

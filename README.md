@@ -1,4 +1,4 @@
-# LatexMacros for TexStudio
+# LaTeX Macros for TexStudio
 A couple of TexStudio macros to improve workflow. The aim is to reduce the ammount of special characters typed and therefore increase typing speed.
 
 ## How-To

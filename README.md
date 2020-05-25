@@ -98,18 +98,18 @@ Inserts a figure with width, image name in default path img/image_name, caption 
 ```JavaScript
 var str_write;
 if (triggerMatches[4] != "") {
-	str_write = "\\begin{figure}[h]\n\
-	\t\\centering\n\
-	\t\\includegraphics[width=" + triggerMatches[1] + "]{" + triggerMatches[2] + "}\n\
-	\t\\caption{" + triggerMatches[3] + "}\n\
-	\t\\label{img:" + triggerMatches[4] + "}\n\
-	\\end{figure}\n";
+  str_write = "\\begin{figure}[h]\n\
+  \t\\centering\n\
+  \t\\includegraphics[width=" + triggerMatches[1] + "]{" + triggerMatches[2] + "}\n\
+  \t\\caption{" + triggerMatches[3] + "}\n\
+  \t\\label{img:" + triggerMatches[4] + "}\n\
+  \\end{figure}\n";
 } else {
-	str_write = "\\begin{figure}[h]\n\
-	\t\\centering\n\
-	\t\\includegraphics[width=" + triggerMatches[1] + "]{" + triggerMatches[2] + "}\n\
-	\t\\caption{" + triggerMatches[3] + "}\n\
-	\\end{figure}\n";
+  str_write = "\\begin{figure}[h]\n\
+  \t\\centering\n\
+  \t\\includegraphics[width=" + triggerMatches[1] + "]{" + triggerMatches[2] + "}\n\
+  \t\\caption{" + triggerMatches[3] + "}\n\
+  \\end{figure}\n";
 }
 editor.write(str_write);
 ```
@@ -143,17 +143,17 @@ var hat_pos = triggerMatches[2].indexOf("^");
 var und_pos = triggerMatches[2].indexOf("_");
 
 if ((hat_pos == -1) && (und_pos != -1)) {
-	editor.write(mid[0] + "_\\mathrm{" + mid[1] + "}");
+  editor.write(mid[0] + "_\\mathrm{" + mid[1] + "}");
 } else if ((und_pos == -1) && (hat_pos != -1)) {
-	editor.write(mid[0] + "^\\mathrm{" + mid[1] + "}");
-} else if ((und_pos != -1) && (hat_pos != -1)) {
-	if (hat_pos < und_pos) {
-		editor.write(mid[0] + "^\\mathrm{" + mid[1] + "}_\\mathrm{" + mid[2] + "}");
-	} else {
-		editor.write(mid[0] + "_\\mathrm{" + mid[1] + "}^\\mathrm{" + mid[2] + "}");
-	}
+  editor.write(mid[0] + "^\\mathrm{" + mid[1] + "}");
+} else if ((und_pos != -1) && (hat_pos != -1)) { 
+  if (hat_pos < und_pos) {
+    editor.write(mid[0] + "^\\mathrm{" + mid[1] + "}_\\mathrm{" + mid[2] + "}");
+  } else {
+    editor.write(mid[0] + "_\\mathrm{" + mid[1] + "}^\\mathrm{" + mid[2] + "}");
+  }
 } else {
-	editor.write("\\mathrm{" + triggerMatches[2] + "}");
+  editor.write("\\mathrm{" + triggerMatches[2] + "}");
 }
 editor.write(triggerMatches[3]);
 ```

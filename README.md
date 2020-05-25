@@ -5,7 +5,8 @@ A couple of TexStudio macros to improve workflow. The aim is to reduce the ammou
 **THIS PROCESS OVERRIDES THE MACROS THAT ARE CURRENTLY IN USE.**
 1. Back up your current Profile by clicking ```Options->Save Profile...``` and saving your current TexStudio profile.
 2. Click ```Options->Load Profile...``` Select the ```.txsprofile``` you want to import and click ```open```.  
-If you want to continue using your own macros, you can also export your own macros beforehand and reimport them afterwards or edit the ```.txsprofile``` to include your own macros. Just make sure there are no conflicts between the macros, or you might encounter unexpected behaviour.
+
+If you want to continue using your own macros, you can export your own macros before importing the profile and reimport them afterwards. Another possibility is using your extracting the macros from the included ```.txsprofile``` via a text editor and adding them to your own profile backup. This is probably a safer way - I'm not an expert. Just make sure there are no conflicts between the macros, or you might encounter unexpected behaviour.
 
 ## List of Macros
 How To Read This: Macros are grouped by their style and actions: environment creation macros, code insertion macros (shorthands) and script macros for advanced editing.  

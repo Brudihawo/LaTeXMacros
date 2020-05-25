@@ -1,8 +1,11 @@
 # LatexMacros for TexStudio
 A couple of TexStudio macros to improve workflow. The aim is to reduce the ammount of special characters typed and therefore increase typing speed.
 
-## How to use
-In TexStudio, click ```Options->Load Profile...``` Select the ```.txsprofile``` you want to import and click ```open```.
+## How-To
+**THIS PROCESS OVERRIDES THE MACROS THAT CURRENTLY ARE IN USE.**
+1. Back up your current Profile by clicking ```Options->Save Profile...``` and saving your current TexStudio profile.
+2. Click ```Options->Load Profile...``` Select the ```.txsprofile``` you want to import and click ```open```.
+If you want to continue using your own macros, you can also export your own macros beforehand and reimport them afterwards or edit the ```.txsprofile``` to include your own macros. Just make sure there are no conflicts between the macros, or you might encounter unexpected behaviour.
 
 ## List of Macros
 How To Read This: Macros are grouped by their style and actions: environment creation macros, code insertion macros (shorthands) and script macros for advanced editing.  
